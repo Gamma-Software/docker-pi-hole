@@ -15,6 +15,8 @@ ENV S6_OVERLAY_VERSION v2.1.0.2
 COPY install.sh /usr/local/bin/install.sh
 ENV PIHOLE_INSTALL /etc/.pihole/automated\ install/basic-install.sh
 
+COPY etc-unbound /etc/unbound/unbound.conf.d/
+
 RUN bash -ex install.sh 2>&1 && \
     rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
 

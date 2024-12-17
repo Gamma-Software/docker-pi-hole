@@ -60,6 +60,7 @@ rm /usr/local/bin/service
 
 # IPv6 support for nc openbsd better than traditional
 apt-get install -y --force-yes netcat-openbsd
+apt install unbound -y # install unbound
 
 # Source the Pi-hole install script to make use of the fetch_checkout_pull_branch functions as calling pihole checkout directly does not work hre
 PH_TEST="true" . "${PIHOLE_INSTALL}"
